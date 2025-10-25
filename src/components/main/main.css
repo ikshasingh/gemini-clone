@@ -14,6 +14,7 @@ width: 100%;
     font-size:22px;
     padding: 20px;
     color: #585858;
+  
    
     
 }
@@ -22,11 +23,14 @@ width: 100%;
     width:40px;
     border-radius: 50%;
     cursor: pointer;
+    
 }
+
 
 .main-container{
     max-width: 900px;
     margin: auto;
+   
     
 
 }
@@ -52,6 +56,7 @@ width: 100%;
    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     gap: 15px;
     padding: 20px;
+   margin-bottom: 25px;
 }
 .main-container .card{
     background-color: #dee0e0;
@@ -85,7 +90,7 @@ width: 100%;
     position: absolute;
     bottom:0;
     width: 100%;
-  max-width: 870px;
+  max-width: 950px;
   padding: 0px 50px;
   margin: auto;
    
@@ -100,7 +105,8 @@ width: 100%;
     justify-content: space-between;
     gap:10px;
     background-color: #dee0e0;
-   margin-right: 10px;
+   margin-right: 20px;
+   margin-left: -28px;
     padding: 10px 20px;
     padding-left: 20px;
     border-radius: 50px;
@@ -128,6 +134,7 @@ width: 100%;
     display: flex;
     align-items: center;
     gap:15px;
+   
 }
 
 .main .bottom-info{
@@ -137,5 +144,98 @@ width: 100%;
   font-weight: 300
   ;
 }
+
+.result{
+    padding: 0px 5%;
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+/* for the user input*/
+.result-title{
+    margin:30px 0px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data{
+    display: flex;
+    align-items:start;
+    gap:20px;
+}
+
+.loader{
+width: 100%;
+display: flex;
+flex-direction: column;
+gap:10px;
+
+}
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background:linear-gradient(to right, #9ed7ff, #ffffff , #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation:loader 3s infinite linear;
+}
+
+@keyframes loader {
+    0%{
+        background-position: -800px 0;
+    }
+    100%{
+        background-position: 800px 0;
+    }
+
+    
+}
+.result-data p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+
+}
+
+@media (max-width: 600px) {
+    .main-bottom{
+        padding: 0px 20px;
+      
+        margin-left: 20px;
+    }
+    .main-bottom input{
+        flex:none;
+        width:200px;
+      
+    }
+        .main-bottom img{
+            width:20px;
+        }
+        .search-box{
+            padding:5px 10px;
+        }
+        .search-box div{
+            gap:5px;
+        }
+        .main-container .cards{
+            margin-bottom: 50px;
+            
+        }
+        .main-container .card{
+            border-radius: 2%;
+        }
+    }
 
 

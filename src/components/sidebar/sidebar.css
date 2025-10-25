@@ -1,3 +1,4 @@
+
 .sidebar{
     min-height:100vh;
     display: flex;  
@@ -38,6 +39,7 @@
 .sidebar .recent{
     display: flex;
     flex-direction: column;
+    animation : fadeIn 1s ease-in;
 }
 
 .sidebar .recent-title{
@@ -79,3 +81,10 @@
         cursor: pointer;
         
     }
+
+    @media (max-width: 600px){
+        .sidebar{
+            
+            display: none;
+    }
+}
